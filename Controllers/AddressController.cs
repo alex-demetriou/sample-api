@@ -20,6 +20,7 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
+        [Route("address/{postCode}")]
         [HttpGet]
         public IActionResult GetAddress(string postCode)
         {
