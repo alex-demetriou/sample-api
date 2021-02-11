@@ -20,9 +20,9 @@ namespace WebApi.Controllers
             _logger = logger;
         }
 
-        [Route("address/{postCode}")]
+        [Route("address")]
         [HttpGet]
-        public IActionResult GetAddress(string postCode)
+        public IActionResult GetAddress([FromQuery] string postCode)
         {
             if (!ValidatePostcode(postCode)) return new BadRequestResult();
 
